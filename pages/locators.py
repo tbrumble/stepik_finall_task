@@ -6,5 +6,5 @@ class MainPageLocators:
 
 
 class LoginPageLocators:
-    LOGIN_FORM = '#content_inner > div > div.col-sm-6.login_form'
-    REGISTER_FROM = '#content_inner > div > div.col-sm-6.register_form'
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+    REGISTER_FROM = (By.CSS_SELECTOR, "#register_form")

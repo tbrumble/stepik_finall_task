@@ -3,11 +3,9 @@ from .pages.login_page import LoginPage
 
 
 def test_guest_can_go_to_login_page(browser):
-    # link = "http://selenium1py.pythonanywhere.com/"
-    # page = MainPage(browser, link)
-    # page.open()
-    # page.should_be_login_link()
-
-    page1 = LoginPage(browser, "http://selenium1py.pythonanywhere.com/ru/accounts/login/")
-    page1.open()
-    page1.should_be_login_url()
+    link = "http://selenium1py.pythonanywhere.com"
+    page = MainPage(browser, link)
+    page.open()
+    page.go_to_login_page()
+    login_page = LoginPage(browser, browser.current_url)
+    login_page.should_be_login_page()
